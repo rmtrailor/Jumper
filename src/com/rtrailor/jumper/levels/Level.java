@@ -17,6 +17,13 @@ import com.rtrailor.jumper.objects.environment.WinBlock;
 import com.rtrailor.jumper.window.GameObjectHandler;
 import com.rtrailor.jumper.window.LevelParser;
 
+/* * 
+ *  Class:	Level
+ *  --------------
+ *  Abstract game level that all the other levels extend from.
+ * 
+ */
+
 public abstract class Level {
 	
 	private BufferedImage levelMap, tileSet;

@@ -4,6 +4,13 @@ import java.awt.Dimension;
 
 import javax.swing.JFrame;
 
+/* * 
+ *  Class:  WindowManager
+ *  ---------------------
+ *  Sets up the window used for the game.
+ * 
+ */
+
 public class WindowManager {
 	
 	public WindowManager(int width, int height, String title, Game game) {

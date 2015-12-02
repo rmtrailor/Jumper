@@ -8,6 +8,16 @@ import java.util.LinkedList;
 import com.rtrailor.jumper.objects.GameObject;
 import com.rtrailor.jumper.objects.GameObjectID;
 
+/* *
+ *  Class:	WinBlock
+ *  ----------------
+ *  These blocks are meant to be used for the finish zone of the level. The player
+ *  finishes the level upon contact with one of these blocks.
+ *
+ * 	NOTE: This block is invisible to the player.
+ * 
+ */
+
 public class WinBlock extends GameObject {
 	
 	private int width = 32, height = 32;

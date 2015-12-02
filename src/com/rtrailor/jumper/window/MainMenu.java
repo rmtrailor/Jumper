@@ -8,6 +8,13 @@ import java.awt.Rectangle;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
+/* * 
+ *  Class:  MainMenu
+ *  ----------------
+ *  Creates the screen used as the main menu of the game.
+ * 
+ */
+
 public class MainMenu {
 	
 	private GameState gameState;

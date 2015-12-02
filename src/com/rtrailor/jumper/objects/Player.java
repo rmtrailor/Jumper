@@ -9,11 +9,16 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.io.File;
-
 import javax.imageio.ImageIO;
 import javax.imageio.stream.FileImageInputStream;
-
 import com.rtrailor.jumper.window.GameObjectHandler;
+
+/* *
+ *  Class:	Player
+ *  --------------
+ *  The class for the player's character.
+ * 
+ */
 
 public class Player extends GameObject {
 	
@@ -231,7 +236,4 @@ public class Player extends GameObject {
 	public Float getRightBounds() {
 		return new Rectangle2D.Float(x + (width - (width / 20)), y + (width / 6), width / 10, height / 1.25f);
 	}
-
-	
-
 }

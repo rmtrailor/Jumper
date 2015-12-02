@@ -10,6 +10,13 @@ import java.util.LinkedList;
 import com.rtrailor.jumper.objects.GameObject;
 import com.rtrailor.jumper.objects.GameObjectID;
 
+/* *
+ *  Class:	Block
+ *  --------------
+ *  Standard block used to create the levels.
+ * 
+ */
+
 public class Block extends GameObject {
 	
 	private int width = 32, height = 32;

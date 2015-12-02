@@ -8,6 +8,15 @@ import java.util.LinkedList;
 import com.rtrailor.jumper.objects.GameObject;
 import com.rtrailor.jumper.objects.GameObjectID;
 
+/* *
+ *  Class:	DeathBlock
+ *  ------------------
+ *  Block that kills player's character upon contact.
+ *  
+ *  NOTE: This block is invisible to the player.
+ * 
+ */
+
 public class DeathBlock extends GameObject {
 	
 	int width = 32, height = 32;

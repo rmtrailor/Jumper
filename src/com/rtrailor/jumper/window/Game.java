@@ -10,12 +10,11 @@ import com.rtrailor.jumper.levels.TestLevel;
 import com.rtrailor.jumper.objects.GameObjectID;
 import com.rtrailor.jumper.objects.Player;
 
-/**
- * This is the main class for the game Jumper. This class initializes the necessary 
- * components and runs the loop for the game.
- * 
- * @author Rubin Trailor
- * @version 0.60
+/* *
+ *  Class:	Game
+ *  ------------
+ *  Main class for the game. Initiliazes the necessary components used in the game and
+ *  starts/runs the game loop.
  *
  */
 

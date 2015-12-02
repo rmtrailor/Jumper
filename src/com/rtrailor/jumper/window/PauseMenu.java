@@ -6,6 +6,13 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 
+/* * 
+ *  Class:  PauseMenu
+ *  -----------------
+ *  Creates the screen used as the pause menu of the game.
+ * 
+ */
+
 public class PauseMenu {
 	
 	private GameState gameState;

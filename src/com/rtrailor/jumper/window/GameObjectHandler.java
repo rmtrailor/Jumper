@@ -6,6 +6,13 @@ import java.util.LinkedList;
 import com.rtrailor.jumper.objects.GameObject;
 import com.rtrailor.jumper.objects.GameObjectID;
 
+/* * 
+ *  Class:  GameObjectHandler
+ *  -------------------------
+ *  Storage for game objects. Updates and renders all the objects stored in the handler.
+ * 
+ */
+
 public class GameObjectHandler {
 	
 	private LinkedList<GameObject> objects = new LinkedList<GameObject>();

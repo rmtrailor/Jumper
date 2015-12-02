@@ -3,6 +3,13 @@ package com.rtrailor.jumper.levels;
 import com.rtrailor.jumper.objects.Player;
 import com.rtrailor.jumper.window.GameObjectHandler;
 
+/* * 
+ *  Class:  Level10
+ *  ---------------
+ *  Level 10
+ * 
+ */
+
 public class Level10 extends Level {
 
 	public Level10(GameObjectHandler objectHandler,

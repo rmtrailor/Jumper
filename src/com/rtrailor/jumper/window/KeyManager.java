@@ -5,6 +5,13 @@ import java.awt.event.KeyEvent;
 
 import com.rtrailor.jumper.objects.Player;
 
+/* * 
+ *  Class:  KeyManager
+ *  ------------------
+ *  Allows input from the keyboard. The operations depend on the game state.
+ * 
+ */
+
 public class KeyManager extends KeyAdapter {
 	
 	private Game game;

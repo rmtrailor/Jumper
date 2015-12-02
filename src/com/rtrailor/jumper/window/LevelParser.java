@@ -14,6 +14,15 @@ import org.json.simple.parser.ParseException;
 
 import com.rtrailor.jumper.objects.GameObject;
 
+/* * 
+ *  Class:  LevelParser
+ *  -------------------
+ *  Validates that a given JSON level file has the necessary information. 
+ *  If the file has the needed information, then class parses the JSON file and creates
+ *  the level.
+ * 
+ */
+
 public class LevelParser {
 	
 	private String levelFile;

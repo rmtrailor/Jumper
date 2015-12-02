@@ -4,6 +4,13 @@ import java.awt.Rectangle;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
+/* * 
+ *  Class:	MouseManager
+ *  --------------------
+ *  Allows input from the mouse. The operations depend on the game state.
+ * 
+ */
+
 public class MouseManager implements MouseListener {
 
 	private GameState gameState; 
@@ -11,7 +18,6 @@ public class MouseManager implements MouseListener {
 	private int screenWidth, screenHeight;
 	
 	public MouseManager(Game game, int screenWidth, int screenHeight) {
-//		this.gameState = gameState;
 		this.game = game;
 		this.screenWidth = screenWidth;
 		this.screenHeight = screenHeight;

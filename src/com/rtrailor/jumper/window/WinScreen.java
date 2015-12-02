@@ -6,6 +6,13 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 
+/* * 
+ *  Class:  WinScreen
+ *  -----------------
+ *  Creates the screen displayed when the player finishes a level.
+ * 
+ */
+
 public class WinScreen {
 	
 	private GameState gameState;

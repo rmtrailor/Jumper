@@ -2,6 +2,12 @@ package com.rtrailor.jumper.window;
 
 import com.rtrailor.jumper.objects.Player;
 
+/* *
+ *  Class:	Camera
+ *  --------------
+ *  Focuses the screen on the player.
+ */
+
 public class Camera {
 	
 	private float x, y;

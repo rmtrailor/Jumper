@@ -6,6 +6,13 @@ import com.rtrailor.jumper.levels.Level10;
 import com.rtrailor.jumper.levels.Level2;
 import com.rtrailor.jumper.objects.Player;
 
+/* * 
+ *  Class:  LevelHandler
+ *  --------------------
+ *  Handles the loading and unloading of levels.
+ * 
+ */
+
 public class LevelHandler {
 	
 	private GameObjectHandler handler, environHandler;

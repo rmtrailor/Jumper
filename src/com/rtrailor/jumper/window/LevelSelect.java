@@ -6,6 +6,13 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 
+/* * 
+ *  Class:  LevelSelect
+ *  -------------------
+ *  Creates the screen used level selection.
+ * 
+ */
+
 public class LevelSelect {
 	
 	private GameState gameState;

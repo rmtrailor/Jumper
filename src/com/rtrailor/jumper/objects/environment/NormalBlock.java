@@ -9,6 +9,15 @@ import java.util.LinkedList;
 import com.rtrailor.jumper.objects.GameObject;
 import com.rtrailor.jumper.objects.GameObjectID;
 
+/* *
+ *  Class:	NormalBlock
+ *  -------------------
+ *  Normal block used to create the levels.
+ *
+ * 	NOTE: Replaced with Block. Will be removed later if still unused.
+ * 
+ */
+
 public class NormalBlock extends GameObject {
 	
 	private float width = 32, height = 32;

@@ -6,6 +6,13 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 
+/* * 
+ *  Class:	DeathScreen
+ *  -------------------
+ *  The screen displayed when the player's character dies.
+ * 
+ */
+
 public class DeathScreen {
 
 	private GameState gameState;

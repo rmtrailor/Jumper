@@ -10,6 +10,14 @@ import java.util.LinkedList;
 import com.rtrailor.jumper.objects.GameObject;
 import com.rtrailor.jumper.objects.GameObjectID;
 
+/* *
+ *  Class:	SpikeBlock
+ *  ------------------
+ *  Block that resembles spikes. This block is an obstacle that the player must
+ *  avoid. The spikes kills the player's character upon contact. 
+ * 
+ */
+
 public class SpikeBlock extends GameObject {
 
 	private int width = 32, height = 32;
