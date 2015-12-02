@@ -45,24 +45,19 @@ public class LevelSelect {
 			g2d.draw(level1);
 			
 			g.drawString("2", buttonX + (buttonX/ 2) + 135, buttonY + (buttonY /2 ) + 8);
+			
 			g2d.draw(level2);
-			
 			g2d.draw(level3);
-			
 			g2d.draw(level4);
-			
 			g2d.draw(level5);
-			
 			g2d.draw(level6);
-			
 			g2d.draw(level7);
-			
 			g2d.draw(level8);
-			
 			g2d.draw(level9);
-			
+
 			g.drawString("10", buttonX + (buttonX/ 2) + 510, buttonY + (buttonY /2 ) + 165);
 			g2d.draw(level10);
+
 		} else if (gameState == GameState.LEVELSELECT && loadingLevel) {
 			g.drawString("Loading", (screenWidth / 2) - 64, screenHeight / 2);
 		}

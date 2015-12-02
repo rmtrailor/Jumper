@@ -7,7 +7,6 @@ import com.rtrailor.jumper.objects.Player;
 
 public class KeyManager extends KeyAdapter {
 	
-//	private GameState gameState;
 	private Game game;
 	private Player player;
 	
@@ -19,15 +18,12 @@ public class KeyManager extends KeyAdapter {
 	public void keyPressed(KeyEvent e) {
 		int key = e.getKeyCode();
 		
-//		if (gameState == GameState.INGAME) {
 		if (game.getGameState() == GameState.INGAME) {
 			if (key == KeyEvent.VK_A) {
-	//			player.setXVelocity(player.getMovementSpeed() * -1);
 				player.setMovingLeft(true);
 			}
 			
 			if (key == KeyEvent.VK_D) {
-	//			player.setXVelocity(player.getMovementSpeed());
 				player.setMovingRight(true);
 			}
 			
@@ -50,7 +46,6 @@ public class KeyManager extends KeyAdapter {
 	public void keyReleased(KeyEvent e) {
 		int key = e.getKeyCode();
 		
-//		if (gameState == GameState.INGAME) {
 		if (game.getGameState() == GameState.INGAME) {
 			if (key == KeyEvent.VK_A) {
 				player.setMovingLeft(false);

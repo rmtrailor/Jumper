@@ -11,7 +11,7 @@ public class LevelHandler {
 	private GameObjectHandler handler, environHandler;
 	private Player player;
 	private int screenWidth, screenHeight;
-	private Level currentLevel; // TODO: Create an abstract level later
+	private Level currentLevel;
 	private String[] levels = {"res/levels/level_1.json", "res/levels/level_2.json", "res/levels/level_10.json"};
 	
 	public LevelHandler(GameObjectHandler handler, GameObjectHandler environHandler, Player player, int screenWidth, int screenHeight) {
@@ -22,9 +22,7 @@ public class LevelHandler {
 		this.screenHeight = screenHeight;
 	}
 	
-//	public void chooseLevel(TestLevel level) {
 	public void chooseLevel(int levelNum) {
-//		currentLevel = level;
 		if (levelNum == 1) {
 			currentLevel = new Level1(handler, environHandler, levels[levelNum - 1], player, screenWidth, screenHeight);
 		} else if (levelNum == 2) {

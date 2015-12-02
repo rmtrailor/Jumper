@@ -14,7 +14,7 @@ public class GameObjectHandler {
 	public void updateAll() {
 		for (int i = 0; i < objects.size(); i++) {
 			tempObject = objects.get(i);
-			if (tempObject.getGameObjectID() == GameObjectID.player) {
+			if (tempObject.getGameObjectID() == GameObjectID.PLAYER) {
 				tempObject.update(objects);
 			}
 		}
@@ -37,7 +37,7 @@ public class GameObjectHandler {
 	
 	public void removeAll() {
 		for (int i = 0; i < objects.size(); i++) {
-			if (objects.get(i).getGameObjectID() != GameObjectID.player) {
+			if (objects.get(i).getGameObjectID() != GameObjectID.PLAYER) {
 				objects.remove(i);
 			}
 		}

@@ -1,3 +1,13 @@
+/*
+ * Class: GameObject
+ *
+ * Purpose: This abstract is the class that all objects in the game will inherit from.
+ *
+ * Notes: All game objects will are given x and y coordinate values that specify where the objects
+ *        are in the game. A game object ID is given to categorize objects so that other classes
+ *        and functions can easily get certain types of objects.
+ */
+
 package com.rtrailor.jumper.objects;
 
 import java.awt.Graphics;

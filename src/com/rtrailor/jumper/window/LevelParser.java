@@ -51,7 +51,6 @@ public class LevelParser {
 	
 	private boolean validate() {
 		if (levelData.containsKey("layers")) {
-			System.out.println("True");
 			boolean hasEnvironment = false;
 //			boolean hasBackground = false;
 			JSONArray layerArray = (JSONArray) levelData.get("layers");
@@ -98,16 +97,13 @@ public class LevelParser {
 			levelHeight = (int) tempLong;
 //			levelWidth = (int) levelData.get("width");
 //			levelHeight = (int) levelData.get("height");
-			System.out.println("True");
 		} else {
 			System.err.println("JSON level file does not contain height and/or width information");
 			return false;
 		}
 		if (levelData.containsKey("renderorder")) {
-			System.out.println("True");
 			String renderOrder = (String) levelData.get("renderorder");
 			if (renderOrder.equals("right-down")) {
-				System.out.println("True");
 			} else {
 				System.err.println("JSON level file does not contain the correct render order");
 				return false;
@@ -117,12 +113,9 @@ public class LevelParser {
 			return false;
 		}
 		if (levelData.containsKey("tilesets")) {
-			System.out.println("True");
-			// Format for getting tileset information
 			JSONArray tileSets = (JSONArray) levelData.get("tilesets");
 			JSONObject obj = (JSONObject) tileSets.get(0);
 			tileSetPath = (String) obj.get("image");
-//			System.out.println(path);
 		} else {
 			System.err.println("JSON level file does not contain tile set information");
 			return false;

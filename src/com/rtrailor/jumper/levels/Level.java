@@ -46,7 +46,7 @@ public abstract class Level {
 		int levelWidth = parser.getLevelWidth();
 		int levelHeight = parser.getLevelHeight();
 		int[] environmentArray = parser.getEnvironmentArray();
-//		int[] backgroundArray = parser.getBackgroundArray();
+//		int[] backgroundArray = parser.getBackgroundArray(); /* Backgrounds to possibly be implemented later */
 		
 		int x = 0;
 		int y = 0;
@@ -64,10 +64,8 @@ public abstract class Level {
 				player.setY(y * 32);
 			} 
 			else if (objectNumber != 0) {
-//				System.out.println(count++);
 				int objectX = x * 32;
 				int objectY = y * 32;
-//				System.out.println("x: " + objectX + " y: " + objectY);
 				
 				int imageX;
 				Image objectImage;

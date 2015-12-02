@@ -77,15 +77,17 @@ public class Game extends Canvas implements Runnable {
 	 * key input. Sets the game state to the main menu.
 	 */
 	private void init() {
+		/* Initializing the different screens used in the game */
 		mainMenu = new MainMenu(gameState, width, height);
 		levelSelect = new LevelSelect(gameState, width, height);
 		pauseMenu = new PauseMenu(gameState, width, height);
 		winScreen = new WinScreen(gameState, width, height);
 		deathScreen = new DeathScreen(gameState, width, height);
 		
+		/* Initializing object handlers and their necessary objects */
 		objectHandler = new GameObjectHandler();
 		environHandler = new GameObjectHandler();
-		player = new Player(0, 0, GameObjectID.player, objectHandler, environHandler);
+		player = new Player(0, 0, GameObjectID.PLAYER, objectHandler, environHandler);
 		objectHandler.addGameObject(player);
 		levelHandler = new LevelHandler(objectHandler, environHandler, player, width, height);
 		camera = new Camera(player.getX(), player.getY(), width, height);
@@ -94,6 +96,7 @@ public class Game extends Canvas implements Runnable {
 		this.addKeyListener(new KeyManager(this, player));
 		this.addMouseListener(new MouseManager(this, width, height));
 		
+		/* Start the game at the main menu */
 		gameState = GameState.MAINMENU;
 	}
 
@@ -101,7 +104,7 @@ public class Game extends Canvas implements Runnable {
 	 * The game loop. The two main components of the loop are update() and render().
 	 */
 	@Override
-	public void run() {
+	public void run() { 
 		init();
 		long lastTime = System.nanoTime();
 		double updateCap = 120d;
@@ -133,7 +136,7 @@ public class Game extends Canvas implements Runnable {
 			objectHandler.updateAll();
 			camera.update(player);
 			
-			/* Check player info */
+			/* Check player status */
 			if (player.atWin()) {
 				try {
 					Thread.sleep(1000);
@@ -142,11 +145,6 @@ public class Game extends Canvas implements Runnable {
 				}
 				setGameState(GameState.WINSCREEN);
 			} else if (player.isDead()) {
-//				try {
-//					thread.sleep(4000);
-//				} catch (InterruptedException e) {
-//					e.printStackTrace();
-//				}
 				render();
 				try {
 					thread.sleep(1000);
