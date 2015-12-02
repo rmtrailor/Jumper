@@ -8,15 +8,17 @@ import java.awt.geom.Rectangle2D.Float;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.LinkedList;
+import java.io.File;
 
 import javax.imageio.ImageIO;
+import javax.imageio.stream.FileImageInputStream;
 
 import com.rtrailor.jumper.window.GameObjectHandler;
 
 public class Player extends GameObject {
 	
 	private BufferedImage playerImage;
-	private String playerImagePath = "/spritesheets/TestPlayer.png";
+	private String playerImagePath = "res/spritesheets/TestPlayer.png";
 	private float width = 32, height = 64;
 	private int health = 100;
 	private float gravity = 0.1f;
@@ -30,6 +32,7 @@ public class Player extends GameObject {
 		super(x, y, id);
 		this.objectHandler = objectHandler;
 		this.environHandler = environHandler;
+		System.out.println(playerImagePath);
 		playerImage = loadImage(playerImagePath);
 	}
 
@@ -46,12 +49,10 @@ public class Player extends GameObject {
 	}
 	
 	public void checkCollisions() {
-//		for (int i = 0; i < objectHandler.getNumObjects(); i++) {
-//			GameObject tempObject = objectHandler.getObject(i);
 		for (int i = 0; i < environHandler.getNumObjects(); i++) {
 			GameObject tempObject = environHandler.getObject(i);	
 			
-			if (tempObject.getGameObjectID() != GameObjectID.player) {
+			if (tempObject.getGameObjectID() != GameObjectID.PLAYER) {
 				if (tempObject.getGameObjectID() == GameObjectID.WINBLOCK) {
 					if (getBottomBounds().intersects(tempObject.getTopBounds()) ||
 							getTopBounds().intersects(tempObject.getBottomBounds()) ||
@@ -103,20 +104,13 @@ public class Player extends GameObject {
 	}
 
 	public void render(Graphics g) {
-//		g.setColor(Color.blue);
 		if (!isDead()) {
 			g.drawImage(playerImage, (int) x, (int) y, 32, 64, null);
 		} else {
 			this.setMovementSpeed(0);
-//			try {
-//				Thread.sleep(1000);
-//			} catch (InterruptedException e) {
-//				e.printStackTrace();
-//			}
 		}
-//		g.fillRect((int) x, (int) y, (int) width, (int) height);
 		
-//		showBounds(g);
+	//	showBounds(g);	/* Uncomment this to show player bounds for debugging */
 		
 	}
 	
@@ -137,12 +131,13 @@ public class Player extends GameObject {
 	}
 	
 	private BufferedImage loadImage(String path) {
+		BufferedImage pI = null;
 		try {
-			playerImage = ImageIO.read(getClass().getResource(path));
+			pI = ImageIO.read(new FileImageInputStream(new File(path)));
 		} catch (IOException e) {
 			System.err.println("Error loading player image.");
 		}
-		return playerImage;
+		return pI;
 	}
 	
 	/**
